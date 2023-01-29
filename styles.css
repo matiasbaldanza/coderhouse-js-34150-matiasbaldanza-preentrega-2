@@ -40,7 +40,6 @@ label span {
     margin-left: auto;
     font-size: 0.7rem;
     font-style: italic;
-
 }
 
 input {
@@ -50,4 +49,27 @@ input {
 
 button {
     height: 2rem;
+}
+
+table {
+    margin-top: 2rem;
+    border: 2px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+table thead tr {
+    font-weight: 700;
+    background-color: grey;
+    color: white;
+}
+
+td { 
+    padding: 5px 25px;
+}
+
+table tbody tr:nth-last-of-type(even) {
+    background-color: #F0F0F0;
 }
