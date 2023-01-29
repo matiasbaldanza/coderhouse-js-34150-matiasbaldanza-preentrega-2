@@ -21,6 +21,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+
+    overflow-y: scroll;
 }
 
 form { 
@@ -56,14 +58,18 @@ table {
     border: 2px solid grey;
     border-collapse: collapse;
     width: 100%;
-    text-align: center;
     padding: 10px;
 }
 
 table thead tr {
+    text-align: center;
     font-weight: 700;
     background-color: grey;
     color: white;
+}
+
+table tbody tr td {
+    text-align: right;
 }
 
 td { 

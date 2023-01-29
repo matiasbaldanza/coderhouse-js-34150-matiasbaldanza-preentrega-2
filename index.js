@@ -20,7 +20,7 @@ const moneda = new Intl.NumberFormat('es-AR', {
 
 // elementos del DOM
 const prestamoForm = document.querySelector('[prestamo-form]');
-const amortizacionesSection = document.querySelector('[amortizaciones-section]');
+const amortizationTable = document.querySelector('[amortization-table]');
 
 // event listeners
 prestamoForm.addEventListener('submit', simularPrestamo);
@@ -37,7 +37,6 @@ function simularPrestamo(event) {
     const amortizacion = calcularCuotas(montoTotal, plazoEnMeses, tasaAnual);
 
     mostrarCuotas(amortizacion);
-
 }
 
 function calcularCuotas(montoTotal, plazoEnMeses, tasaAnual) {
@@ -67,9 +66,10 @@ function calcularCuotas(montoTotal, plazoEnMeses, tasaAnual) {
 }
 
 function mostrarCuotas(amortizacion) {
+    amortizationTable.textContent = '';
+
     columnas = Object.keys(amortizacion[0]);
 
-    const tabla             =   document.createElement('table');
     const cabeceraTabla     =   document.createElement('thead');
     const cuerpoTabla       =   document.createElement('tbody');
     const pieTabla          =   document.createElement('tfoot');
@@ -87,10 +87,7 @@ function mostrarCuotas(amortizacion) {
         cuerpoTabla.appendChild(fila);
     }
 
-
-    tabla.append(cabeceraTabla, cuerpoTabla);
-
-    amortizacionesSection.appendChild(tabla);
+    amortizationTable.append(cabeceraTabla, cuerpoTabla);
 }
 
 function crearFila(columnas) {
