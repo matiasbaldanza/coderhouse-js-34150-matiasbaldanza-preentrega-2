@@ -1,0 +1,73 @@
+<!-- 
+    Proyecto:   Pre-entrega 2 
+                Matías Baldanza - matiasbaldanza@gmail.com
+                Twitter: @matiasbaldanza
+    Curso:      Javascript
+    Comisión:   #34150 - CoderHouse
+    Profesor:   Gonzalo Ledesma
+
+    Repo:       https://github.com/matiasbaldanza/coderhouse-js-34150-matiasbaldanza-preentrega-2/
+    Sitio:      https://matiasbaldanza.github.io/coderhouse-js-34150-matiasbaldanza-preentrega-2/
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pre-Entrega 2 de Matias Baldanza — Curso de Javascript, Comisión #34150, CoderHouse, 2023</title>
+ 
+     <link rel="stylesheet" href="styles.css">
+     <link rel="icon" type="image/png" href="assets/favicon-matiasbaldanza-16x16.png">
+     <script src="index.js" defer></script>
+ </head>
+ <body>
+    <main>
+        <h1>Solicitud de préstamo</h1>
+    </main>
+    <section form-section>
+        <form prestamo-form action="submit">
+            <label for="monto">Monto a solicitar: 
+                <input 
+                    type="number" 
+                    name="monto" 
+                    id="monto" 
+                    placeholder="10000" 
+                    min="10000" 
+                    step="1000"
+                    required>
+            </label>
+            <label for="interes">Interés (anual): 
+                <input 
+                    type="number" 
+                    name="interes" 
+                    id="interes" 
+                    placeholder="interés" 
+                    min="94" 
+                    max="200" 
+                    step=".01"
+                    aria-required="">
+            </label>
+            <label for="plazo">Plazo (en meses): 
+                <input 
+                    type="number" 
+                    name="plazo" 
+                    id="plazo" 
+                    placeholder="plazo en meses" 
+                    min="3" 
+                    max="60" 
+                    step="1"
+                    required>
+            </label>
+            <button id="simular" type="submit">Simular préstamo</button>
+        </form>
+    </div>
+    </section>
+
+    <section amortizaciones-section>
+        <table amortizaciones-table></table>
+    </section>
+ 
+ </body>
+ </html>
