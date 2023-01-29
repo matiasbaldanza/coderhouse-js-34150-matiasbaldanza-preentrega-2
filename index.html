@@ -28,7 +28,7 @@
     </main>
     <section form-section>
         <form prestamo-form action="submit">
-            <label for="monto">Monto a solicitar: 
+            <label for="monto">Monto a solicitar: <span>(Mínimo, ARS 10000)</span>
                 <input 
                     type="number" 
                     name="monto" 
@@ -36,9 +36,10 @@
                     placeholder="10000" 
                     min="10000" 
                     step="1000"
+                    value="10000"
                     required>
             </label>
-            <label for="interes">Interés (anual): 
+            <label for="interes">Interés (anual): <span>(Mínimo, 94%)</span>
                 <input 
                     type="number" 
                     name="interes" 
@@ -49,7 +50,7 @@
                     step=".01"
                     aria-required="">
             </label>
-            <label for="plazo">Plazo (en meses): 
+            <label for="plazo">Plazo (en meses): <span>(Mínimo, 3)</span>
                 <input 
                     type="number" 
                     name="plazo" 
